@@ -26,4 +26,17 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
     </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>1.0.1.Final</version>
+                <configuration>
+                    <username>USERNAME</username>
+                    <password>PASSWORD</password>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
