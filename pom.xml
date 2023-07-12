@@ -12,7 +12,7 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-    <build>
+
         <finalName>ping</finalName>
     </build>
     <scm>
