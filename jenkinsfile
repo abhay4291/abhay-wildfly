@@ -15,7 +15,7 @@ pipeline {
             steps {
                 
                 sh 'mvn -B -DskipTests clean package'
-                echo "build success"
+                echo "build success and ok"
                 }
             }
         }
