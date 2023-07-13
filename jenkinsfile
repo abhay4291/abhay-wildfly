@@ -18,5 +18,20 @@ pipeline {
                 echo "build success and ok"
                 }
             }
+         post {
+        success {
+            // Actions to perform when the pipeline succeeds
+            echo 'Build successful!'
+
+            // You can add additional steps here, such as sending notifications or triggering downstream jobs
+        }
+
+        failure {
+            // Actions to perform when the pipeline fails
+            echo 'Build failed!'
+
+            // You can add additional steps here, such as sending notifications or triggering downstream jobs
+        }
+    }
         }
      }
