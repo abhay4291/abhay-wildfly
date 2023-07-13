@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the source code from your version control system
+                // Replace the URL and credentials with your own
+                git 'https://github.com/abhay4291/mvnwebapp.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Run Maven to build the project
+                // Adjust the Maven goals and options according to your project
+                sh 'mvn clean package'
+            }
+        }
+    }
+}
