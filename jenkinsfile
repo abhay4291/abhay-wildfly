@@ -19,6 +19,15 @@ pipeline {
                 
                 }
             }
+         
+      stage('Deploy') {
+        steps {
+            withCredentials([usernamePassword(credentialsId: 'wildfly-credentials', usernameVariable: 'abhay4291', passwordVariable: 'Shivam@221997')]) {
+            sh 'scp target/ping.war ec2-user@172.31.46.193:/home/ec2-user/wildfly/standalone/deployments/'
+            
+            }
+        }
+        echo "Deployment completed"
         
         }
      }
