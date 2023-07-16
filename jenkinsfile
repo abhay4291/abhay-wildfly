@@ -23,7 +23,7 @@ pipeline {
       stage('Deploy') {
         steps {
             withCredentials([usernamePassword(credentialsId: 'wildfly-credentials', usernameVariable: 'WILDFLY_USERNAME', passwordVariable: 'WILDFLY_PASSWORD')]) {
-            sh 'scp -i /home/ec2-user/.ssh/private.pem target/ping.war ec2-user@172.31.46.193:/home/ec2-user/wildfly/standalone/deployments/'
+            sh 'scp -i /var/lib/jenkins/.ssh/jenkins-key.pem target/ping.war ec2-user@172.31.46.193:/home/ec2-user/wildfly/standalone/deployments/'
             
             }
         
